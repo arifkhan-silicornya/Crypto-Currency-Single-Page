@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Botstrap  -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/fontawesome/all.min.css">
+        <link rel="stylesheet" href="css/fontawesome/brands.min.css">
+        <link rel="stylesheet" href="css/fontawesome/fontawesome.min.css">
+        <link rel="stylesheet" href="css/fontawesome/regular.min.css">
+        <link rel="stylesheet" href="css/fontawesome/solid.min.css">
+        <link rel="stylesheet" href="css/fontawesome/svg-with-js.min.css">
+        <link rel="stylesheet" href="css/fontawesome/v4-shims.min.css">
+        
+        <link rel="stylesheet" href="css/">
+
+        <link rel="stylesheet" href="">
+
+        <style>
+          .list-group-item{
+            background-color: #2a2d35!important;
+          }
+        /* Chrome, Safari, Edge, Opera */
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          input[type=number] {
+            -moz-appearance: textfield;
+          }
+          .usdt_color{
+            color: #758b9a;
+          }
+          .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+              color: #ffffff;
+              background-color: #12161c;
+              border-color: #fff #eceded #12161c;
+          }
+          a {
+            color: #e9adad;
+            text-decoration: none;
+            background-color: transparent;
+          }
+          a:hover {
+            color: #a5aaaf;
+            text-decoration: underline;
+          }
+          .card{
+            background-color: #191b20!important;
+          }
+          .bg-secondary{
+            color: #fff!important;
+          }
+          ::placeholder{
+            color: white!important;
+          }
+          input[type="time"]::-webkit-calendar-picker-indicator{
+            filter: invert(100%)!important;
+          }
+          input[type="date"]::-webkit-calendar-picker-indicator{
+            filter: invert(100%)!important;
+          }
+          .rounded_custom{
+            border-radius: 1rem !important;
+          }
+          .shadow_new_custom{
+            -webkit-box-shadow: 0px 5px 8px -7px #eee, 0px 2px 2px 0px rgba(255,255,255,0); 
+            box-shadow: 0px 5px 8px -7px #eee, 0px 2px 2px 0px rgba(255,255,255,0);
+            
+          }
+          .shadow{
+            -webkit-box-shadow: 0 0.5rem 1rem rgb(255 254 254 / 4%) !important;
+            box-shadow: 0 0.5rem 1rem rgb(255 254 254 / 4%) !important;
+          }
+          
+        </style>
+
+
+    </head>
+    <body class="bg-dark text-white">
+        
+      <!--  ====================== heading start  ====================== -->
+      <div class="container-fluid">
+        
+          <!-- nav  -->
+          
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <a class="navbar-brand text-warning font-weight-bold" href="#">Brand Name</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav mr-auto my-2 my-lg-0 " >
+                  <li class="nav-item active">
+                    <a class="nav-link text-success font-weight-bold" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-success font-weight-bold" href="#">Trading</a>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-success font-weight-bold" href="#">TRanding Currency</a>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-success font-weight-bold" href="#">History</a>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-success font-weight-bold" href="#">Wish List</a>
+                  </li>
+                  
+                </ul>
+                <ul class="navbar-nav my-2 my-lg-0 " >
+                  
+                <li class="nav-item dropdown">
+                  <span class="nav-link dropdown-toggle text-success font-weight-bold" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <i class="far fa-bell "></i>
+                  </span>
+                  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="#">Name</a></li>
+                    <li><a class="dropdown-item" href="#">Setting</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <span class="nav-link dropdown-toggle text-success font-weight-bold" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Profile
+                  </span>
+                  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="#">Name</a></li>
+                    <li><a class="dropdown-item" href="#">Setting</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </li>
+                </ul>
+              </div>
+            </nav>
+
+            <marquee behavior="" direction="">
+                <span class="mx-3">Bitcoin  <span class="mr-1 bg-success px-2 text-light">52.3 <i class="fas fa-arrow-up "></i></span><span class="bg-danger px-2 text-light">52.3<i class="fas fa-arrow-down ml-1"></i></span> </span>
+                <span class="mx-3">Litcoin  <span class="mr-1 bg-success px-2 text-light">52.3 <i class="fas fa-arrow-up "></i></span><span class="bg-danger px-2 text-light">52.3<i class="fas fa-arrow-down ml-1"></i></span> </span>
+                <span class="mx-3">Dodgecoin  <span class="mr-1 bg-success px-2 text-light">52.3 <i class="fas fa-arrow-up "></i></span><span class="bg-danger px-2 text-light">52.3<i class="fas fa-arrow-down ml-1"></i></span> </span>
+                <span class="mx-3">Shiva Inu  <span class="mr-1 bg-success px-2 text-light">52.3 <i class="fas fa-arrow-up "></i></span><span class="bg-danger px-2 text-light">52.3<i class="fas fa-arrow-down ml-1"></i></span> </span>
+                <span class="mx-3">Bitcoin - 1  <span class="mr-1 bg-success px-2 text-light">52.3 <i class="fas fa-arrow-up "></i></span><span class="bg-danger px-2 text-light">52.3<i class="fas fa-arrow-down ml-1"></i></span> </span>
+                <span class="mx-3">Bitcoin - 2  <span class="mr-1 bg-success px-2 text-light">52.3 <i class="fas fa-arrow-up "></i></span><span class="bg-danger px-2 text-light">52.3<i class="fas fa-arrow-down ml-1"></i></span> </span>
+                <span class="mx-3">Bitcoin - 3   <span class="mr-1 bg-success px-2 text-light">52.3 <i class="fas fa-arrow-up "></i></span><span class="bg-danger px-2 text-light">52.3<i class="fas fa-arrow-down ml-1"></i></span> </span>
+                <span class="mx-3">Bitcoin - 4   <span class="mr-1 bg-success px-2 text-light">52.3 <i class="fas fa-arrow-up "></i></span><span class="bg-danger px-2 text-light">52.3<i class="fas fa-arrow-down ml-1"></i></span> </span>
+            </marquee>
+      </div>
+      <!--  ====================== heading part end ====================== -->
+
+      
+
+    <div class="container-fluid">
+        <div class="row">
+          
+            <div class="col-md-8 ">
+              <!-- ================ clock =================== -->
+              <div class="col-12 table-responsive ">
+                <table class="table table-dark table-striped table-borderless  rounded">
+                  <thead class=" ">
+                    <tr class="text-center font-weight-bolder shadow_new_custom">
+                      <th scope="col">Month</th>
+                      <th scope="col">Week</th>
+                      <th scope="col">Day</th>
+                      <th scope="col">4H</th>
+                      <th scope="col">1H</th>
+                      <th scope="col">15 min</th>
+                      <th scope="col">5 min</th>
+                      <th scope="col">1 min</th>
+                    </tr>
+                  </thead>
+                  <tbody class="">
+                    <tr class="text-center ">
+                      <th scope="row" class=""> <button class="btn text-light bg-dark shadow-sm font-weight-bolder w-100">  29d </button></th>
+                      <th scope="row" class=""> <button class="btn text-light bg-dark shadow-sm font-weight-bolder w-100">  5d </button></th>
+                      <th scope="row" class=""> <button class="btn text-light bg-dark shadow-sm font-weight-bolder w-100 font-weight-bolder"> <span class="mr-3">  22h</span> 22min</button></th>
+                      <th scope="row" class=""> <button class="btn text-light bg-dark shadow-sm font-weight-bolder w-100 font-weight-bolder">  3h 20min </button></th>
+                      <th scope="row" class=""> <button class="btn text-light bg-dark shadow-sm font-weight-bolder w-100 font-weight-bolder">  50 min </button></th>
+                      <th scope="row" class=""> <button class="btn text-light bg-dark shadow-sm font-weight-bolder w-100 font-weight-bolder">  11 min </button></th>
+                      <th scope="row" class=""> <button class="btn text-light bg-dark shadow-sm font-weight-bolder w-100 font-weight-bolder">  3 min </button></th>
+                      <th scope="row" class=""> <button class="btn text-light bg-dark shadow-sm font-weight-bolder w-100 font-weight-bolder">  30 sec </button></th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+  <!-- ================= Clock End ================ -->
+              <!--  ====================== Trading Start  ====================== -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-12 my-3">
+                      <div class="row ">
+                        <h3 class="my-3 col text-warning ">Trading </h3>
+                        <div class="col table-responsive ">
+                          <table class="table table-hover table-striped table-dark table-sm shadow rounded">
+                            <thead>
+                                <tr>
+                                  <th>Total Market CAP</th>
+                                  <th>1.2 Trillion</th>
+                                  
+                                  <th scope="row">20 % Increase  <i class="fas fa-arrow-up text-success "></i> in last 24H </td>
+                                </tr>
+                            </thead>
+                          </table>
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="table-responsive shadow rounded p-3 ">
+                        <table class="table text-light table-hover table-dark mb-0 table-striped ">
+                          <thead>
+                            <tr>
+                              <th scope="col">Sr No.</th>
+                              <th scope="col">Currency</th>
+                              <th scope="col">Total Volumn</th>
+                              <th scope="col">Single Buy Price</th>
+                              <th scope="col">Total Buy Price </th>
+                              <th scope="col">Current Price</th>
+                              <th scope="col">Current Profit</th>
+                              <th scope="col">Total Price</th>
+                              <th scope="col">Total Profit</th>
+                              <th scope="col"><i class="fa fa-percent" aria-hidden="true"></i></th>
+                            </tr>
+                          </thead>
+                          <tbody class="font-weight-bold">
+                            <tr>
+                              <th scope="row">1</th>
+                              <td> <a href="">HNT</a> </td>
+                              <td>2000</td>
+                              <td>10 USDT</td>
+                              <td>20000 USDT</td>
+                              <td> <span class="text-success">12 USDT <i class="fas fa-arrow-up "></i></span></td>
+                              <td class="bg-success "><span class="mr-1 px-2 text-light">2 USDT</span></td>
+                              <td>24000 USDT</td>
+                              <td class="bg-success "><span class="mr-1 px-2 text-light">4000 USDT</span></td>
+                              <td > 25 </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td> <a href="">BTC</a> </td>
+                              <td>2000</td>
+                              <td>12 USDT</td>
+                              <td>20000 USDT</td>
+                              <td> <span class=" text-danger">10 USDT <i class="fas fa-arrow-down "></i></span></td>
+                              <td class="bg-danger"><span class=" px-2 text-light">-2 USDT</span></td>
+                              <td>24000 USDT</td>
+                              <td class="bg-danger "><span class="px-2 text-light">-2300 USDT</i></span></td>
+                              <td >30</td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-4 border border-dark ">
+              <div class="card text-center p-3">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs " id="list-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Sell</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Buy</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body border border-light shadow rounded p-3" >
+                  <div class="row tab-content " id="nav-tabContent">
+
+                    <!-- FOR SELL -->
+                    <div class="col-12 mt-3 tab-pane fade show active " id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                      <!-- <h5>Sell Product</h5> -->
+                    <form >
+                      <div class="input-group">
+                        <input type="text" class="form-control text-light  bg-secondary w-50" aria-label="Text  input with dropdown button" placeholder="Search Currency">
+                        <div class="input-group-append w-50">
+                          <select class="custom-select bg-secondary text-light" id="inputGroupSelect01">
+                            <option value="">Select currency</option>
+                            <option value="1">Bitcoin</option>
+                            <option value="2">LiteCoin</option>
+                            <option value="2">HNT</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                    
+                    <div class="col-12 my-1  my-5">
+                      <span class="btn border border-dark col-12 d-flex justify-content-between text-light bg-secondary mb-1 disabled"><span >Buy Price:</span>  <span class="font-weight-bold">200 <span class="font-weight-normal usdt_color">USDT</span> </span>  </span>
+                      <span class="btn border border-dark col-12 d-flex justify-content-between text-light bg-secondary mb-1 disabled"><span>Sell Price:</span>  <span class="font-weight-bold"> 200 <span class="font-weight-normal usdt_color">USDT</span> </span>  </span>
+                      <span class="btn border border-dark col-12 d-flex justify-content-between text-light bg-secondary mb-1 disabled"><span>Fee Percentage:</span>  <span class="font-weight-bold"> 0.01%  </span>  </span>
+                      <span class="btn border border-dark col-12 d-flex justify-content-between text-light bg-secondary mb-1 disabled"><span>Profit:</span>  <span class="font-weight-bold">200  <span class="font-weight-normal usdt_color">USDT</span> </span>  </span>
+
+                      <button type="submit" class="btn btn-outline-info mt-2 px-5">Submit</button>
+                    </div>
+                    
+                    <div class="col-12 my-1">
+                      <div class="mb-1 text-light">
+                        <input type="number" placeholder="Sell Amount" class="form-control border border-success text-light bg-secondary text-light" min="0"> 
+                      </div>
+                      <div class="mb-1">
+                        <input type="number" placeholder="Sell Price" class="form-control border border-success text-light bg-secondary text-light" min="0">
+                      </div>
+                      <div class="btn btn-info px-5 my-3 ml-0">Total Profit = 200 $</div>
+                    </div>
+                    </div>
+
+                    <!-- FOR BUY -->
+                    <div class="col-12 mt-3 tab-pane fade " id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                      <!-- <h5>Sell Product</h5> -->
+                    <form >
+                      <div class="input-group">
+                        <input type="text" class="form-control text-light bg-secondary text-light w-50" aria-label="Text input with dropdown button" placeholder="Search Currency">
+                        <div class="input-group-append w-50">
+                          <button class="btn btn-secondary dropdown-toggle border border-light w-100" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Currency</button>
+                          <div class="dropdown-menu py-0">
+                            <a class="dropdown-item bg-secondary text-light" href="#">Bitcoin</a>
+                            <a class="dropdown-item bg-secondary text-light" href="#">Litcoin</a>
+                            <a class="dropdown-item bg-secondary text-light" href="#">Dodge Coin</a>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    
+                    <div class="col-12 my-1  my-5">
+                      <form action="" method="post">
+                        <span class="btn border border-light col-12 d-flex justify-content-between text-light bg-secondary p-0">  
+                          <input type="number" placeholder="Buy Price " class="form-control bg-secondary text-light border-0" name="">
+                        </span>
+                        <span class="btn border border-light col-12 d-flex justify-content-between bg-secondary p-0">  
+                          <input type="number" placeholder="Quantity" class="form-control bg-secondary text-light border-0" name="">
+                        </span>
+                        <span class="btn border border-light col-12 d-flex justify-content-between text-light bg-secondary"><span>Fee Percentage:</span>  <span class="font-weight-bold"> 0.01%  </span>  </span>
+                        <span class="btn border border-light col-12 d-flex justify-content-between text-light bg-secondary"><span>Total Amount:</span>  <span class="font-weight-bold"> 10000 tk  </span>  </span>
+                        
+                        <button type="submit" class="btn btn-outline-info mt-2 px-5">Submit</button>
+                      </form>
+                    </div>
+                    
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              
+                
+            </div>
+        </div>
+        
+        <div class="row my-3 p-3">
+          <div class="col-md-12 ">
+            <div class="row d-flex justify-content-between">
+              <div class="col-md-7 py-3  ">
+                <h3 class="text-warning ">Trending Currency</h3>
+                
+                <div class="table-responsive text-light  shadow rounded p-3">
+                  <table class="table text-light table-dark table-hover table-striped"> 
+                    <thead>
+                      <tr>
+                        <th scope="col">S.N.</th>
+                        <th scope="col">Currency</th>
+                        <th scope="col">Treaders </th>
+                        <th scope="col">Volumn</th>
+                        <th scope="col">Present Rate</th>
+                        <th scope="col">1 Hour</th>
+                        <th scope="col">24 Hour</th>
+                        <th scope="col">7 Days</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>BTC</td>
+                        <td>300000</td>
+                        <td>36522 USD</td>
+                        <td>42000.26 USD</td>
+                        <td>24 %</td>
+                        <td>34 %</td>
+                        <td>4 %</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <div class="mt-5">
+                    <a href="" class="btn btn-outline-warning btn-sm px-5">See All </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 py-3 ">
+                <h5 class="text-warning ">Wish List  </h5>
+                <div class="card text-center p-3">
+                  <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs " id="list-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="list-home-list2" data-toggle="list" href="#list-home2" role="tab" aria-controls="home2">Wish List </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="list-profile-list2" data-toggle="list" href="#list-profile2" role="tab" aria-controls="profile2">Data</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="card-body  shadow rounded p-3" >
+                    <div class="row tab-content " id="nav-tabContent">
+  
+                      <!-- FOR SELL -->
+                      <div class="col-12 mt-3 tab-pane fade show active " id="list-home2" role="tabpanel" aria-labelledby="list-home-list2">
+                        <!-- <h5>Sell Product</h5> -->
+                        <div class="table-responsive  ">
+                          <table class="table text-light table-hover table-dark table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Coin</th>
+                                <th scope="col">Current Price </th>
+                                <th scope="col" title="Last 24 hours changed "> 24% </th>
+                                <th scope="col" title="Last 7 days changed "> 7% </th>
+                                <th scope="col" title="High price in last  24 hours "> 24 <i class="fas fa-arrow-up"></i> </th>
+                                <th scope="col" title="Low price in last 24 hours "> 24 <i class="fas fa-arrow-down"></i> </th>
+                                <th scope="col" title=" Available Quantity of The product has been purchased "> Available Volumn </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>BTC</td>
+                                <td>300000</td>
+                                <td class="text-success">  <i class="fas fa-chevron-up"></i> 2.22 %</td>
+                                <td class="text-danger"> <i class="fas fa-chevron-down"></i>2.22  %</td>
+                                <td class="text-success">$2.22  </td>
+                                <td class="text-danger"> $2.22  </td>
+                                <td>4 </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+  
+                      <!-- FOR BUY -->
+                      <div class="col-12 mt-3 tab-pane fade " id="list-profile2" role="tabpanel" aria-labelledby="list-profile-list2">
+                        <!-- <h5>Sell Product</h5> -->
+                        <div class="table-responsive  ">
+                          <table class="table text-light table-hover table-dark table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Coin</th>
+                                <th scope="col">Current Price </th>
+                                <th scope="col" title="Last 24 hours changed "> 24% </th>
+                                <th scope="col" title="Last 7 days changed "> 7% </th>
+                                <th scope="col" title="High price in last  24 hours "> 24 <i class="fas fa-arrow-up"></i> </th>
+                                <th scope="col" title="Low price in last 24 hours "> 24 <i class="fas fa-arrow-down"></i> </th>
+                                <th scope="col" title=" Available Quantity of The product has been purchased "> Available Volumn </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>BTC</td>
+                                <td>300000</td>
+                                <td class="text-success">  <i class="fas fa-chevron-up"></i> 2.22 %</td>
+                                <td class="text-danger"> <i class="fas fa-chevron-down"></i>2.22  %</td>
+                                <td class="text-success">$2.22  </td>
+                                <td class="text-danger"> $2.22  </td>
+                                <td>4 </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+            </div> 
+            </div>
+            
+          </div>
+        </div>
+
+
+
+
+        <div class="row ">
+            <div class="col-md-12  my-3 py-3 p-3">
+                <h3 class="text-warning ">User Trading History</h3>
+                
+                  <div class="col-md-12 ">
+                    <form action="" method="post" class="row">
+                      
+                      <div class="form-group col-md-3">
+                        <div>Select Currency</div>
+                        <select class="custom-select bg-secondary text-light" id="inputGroupSelect01">
+                          <option selected>Select currency</option>
+                          <option value="1">Bitcoin</option>
+                          <option value="2">LiteCoin</option>
+                          <option value="2">HNT</option>
+                        </select>
+                      </div>
+                      
+                      <div class="form-group col-md-3 ">
+                        <div>Select Date</div>
+                        <div class="d-flex justify-content-between text-white text-light">
+                          <input type="date" name="date" placeholder="Select Date" class="form-control bg-secondary text-light ">
+                          <input type="time" name="time" placeholder="Select Time" class="form-control bg-secondary text-light ">
+                        </div>
+                        
+                      </div>
+                      
+                      <div class="form-group col-md-3">
+                        <div>Side</div>
+                        <select class="custom-select bg-secondary text-light" id="inputGroupSelect01">
+                          <option selected>Select Side</option>
+                          <option value="1">Sell</option>
+                          <option value="2">Buy</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-md-3 d-flex align-items-end justify-content-lg-around">
+                        <button type="submit" class="btn btn-outline-success px-5">Submit</button>
+                        <button type="reset" class="btn btn-outline-danger px-5">Reset</button>
+                      </div>
+                      
+                    </form>
+                  </div>
+                  
+
+                </div>
+                
+                <div class="col-md-12 border border-dark my-3 py-3 ">
+                  <div class="table-responsive shadow rounded p-3">
+                    <table class="table text-light table-hover table-dark table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Sr No.</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Pair</th>
+                          <th scope="col">Buy Price </th>
+                          <th scope="col">Sell Price</th>
+                          <th scope="col">Profit</th>
+                          <th scope="col">Volumn</th>
+                          <th scope="col">Total Profit</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>5-june-2020 12:40</td>
+                          <td>HNT</td>
+                          <td>20</td>
+                          <td>25</td>
+                          <td>5</td>
+                          <td>100</td>
+                          <td>500</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>5-june-2020 12:40</td>
+                          <td>HNT</td>
+                          <td>20</td>
+                          <td>25</td>
+                          <td>5</td>
+                          <td>100</td>
+                          <td>500</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>5-june-2020 12:40</td>
+                          <td>HNT</td>
+                          <td>20</td>
+                          <td>25</td>
+                          <td>5</td>
+                          <td>100</td>
+                          <td>500</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="">
+                      <a href="" class="btn btn-outline-warning btn-sm px-5">See More</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+       
+       
+            <div class="row ">
+              <div class="col-md-12  my-3 py-3 p-3">
+                  <h3 class="text-warning">Emergency Notification</h3>
+              </div>
+                
+                <div class="col-md-12 border border-dark mb-3 pb-3 ">
+                  <div class="table-responsive shadow rounded p-3">
+                    <table class="table text-light table-hover table-dark table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Sr No.</th>
+                          <th scope="col">Coin Name</th>
+                          <th scope="col">Low Currency</th>
+                          <th scope="col"> % Low Currency</th>
+                          <th scope="col">High Currency</th>
+                          <th scope="col"> % High Currency</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>HNT</td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold ">20 USDT</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold ">20 %</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 USDT</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 %</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>HNT</td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 USDT</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 %</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light  border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 USDT</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 %</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>HNT</td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 USDT</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 %</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 USDT</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 %</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>HNT</td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 USDT</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 %</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light  border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 USDT</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light  border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                          <td> 
+                            <form action="" method="post">
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text bg-secondary text-light font-weight-bold">20 %</span>
+                                </div>
+                                <input type="text" class="form-control bg-dark text-light  border-left-0"  min="0" placeholder="Low Amount" aria-label="Low Amount" aria-describedby="Low Amount">
+                                <div class="input-group-append">
+                                  
+                                  <button type="submit" class="input-group-text btn bg-dark text-light"> OK </button>
+                                </div>
+                              </div>  
+                            </form>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="">
+                      <a href="" class="btn btn-outline-warning btn-sm px-5">See More</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        
+        <script src="js/bootstrap.min.js" ></script>
+        
+        <script src="js/fontawesome/all.min.js" ></script>
+        <script src="js/fontawesome/brands.min.js" ></script>
+        <script src="js/fontawesome/fontawesome.min.js" ></script>
+        <script src="js/fontawesome/regular.min.js" ></script>
+        <script src="js/fontawesome/solid.min.js" ></script>
+        <script src="js/fontawesome/v4-shims.min.js" ></script>
+
+
+        <script>
+          
+        </script>
+    </body>
+</html>
